@@ -34,31 +34,4 @@ function setMode(mode) {
     goodRange = 16;
     greatRange = 6;
     modeText.innerText = "Normal";
-  }
-
-  if (mode === "hard") {
-    speed = 9;
-    goodRange = 9;
-    greatRange = 3;
-    modeText.innerText = "Hard";
-  }
-}
-
-setMode("normal");
-
-function showPopup(text, className) {
-  popup.className = "popup " + className;
-  popup.innerText = text;
-}
-
-function randomZone() {
-
-  zoneAngle = Math.floor(Math.random() * 360);
-
-  goodZone.style.transform =
-    `rotate(${zoneAngle}deg)`;
-
-  greatZone.style.transform =
-    `rotate(${zoneAngle}deg)`;
-}
 });
