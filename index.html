@@ -4,39 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DBD Skill Check Trainer</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="overlay"></div>
+<div class="bg-overlay"></div>
 
-  <div class="container">
+<div class="container">
 
-    <h1>DBD Skill Check Trainer</h1>
+  <h1>DBD Skill Check Trainer</h1>
 
-    <div class="stats">
-      <div>Streak: <span id="streak">0</span></div>
-      <div>Best: <span id="best">0</span></div>
-      <div>Mode: <span id="modeText">Normal</span></div>
+  <div class="topbar">
+    <div class="card">
+      <span>Streak</span>
+      <h2 id="streak">0</h2>
     </div>
 
-    <div class="mode-buttons">
-      <button onclick="setMode('easy')">Easy</button>
-      <button onclick="setMode('normal')">Normal</button>
-      <button onclick="setMode('hard')">Hard</button>
+    <div class="card">
+      <span>Best</span>
+      <h2 id="best">0</h2>
     </div>
 
-    <div class="circle" id="circle">
-      <div class="zone" id="zone"></div>
-      <div class="pointer" id="pointer"></div>
+    <div class="card">
+      <span>Mode</span>
+      <h2 id="modeText">Normal</h2>
     </div>
+  </div>
 
-    <p id="result">Press SPACE when the pointer reaches the zone!</p>
+  <div class="modes">
+    <button onclick="setMode('easy')">Easy</button>
+    <button onclick="setMode('normal')">Normal</button>
+    <button onclick="setMode('hard')">Hard</button>
+  </div>
 
-    <button id="startBtn">Start Skill Check</button>
+  <div class="circle">
+
+    <div class="good-zone" id="goodZone"></div>
+    <div class="great-zone" id="greatZone"></div>
+
+    <div class="pointer" id="pointer"></div>
+
+    <div class="center-dot"></div>
 
   </div>
 
-  <script src="./script.js"></script>
+  <div id="popup" class="popup"></div>
+
+  <button id="startBtn">Start Skill Check</button>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
