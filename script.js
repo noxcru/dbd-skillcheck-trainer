@@ -35,3 +35,12 @@ function setMode(mode) {
     greatRange = 6;
     modeText.innerText = "Normal";
 });
+const generatorBar = document.getElementById("generatorBar");
+const comboText = document.getElementById("combo");
+
+let generatorProgress = 0;
+let combo = 1;
+let reverseSpinChance = 0.15;
+let fakeSkillCheckChance = 0.10;
+let rotationDirection = 1;
+let keybind = "Space";
