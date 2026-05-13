@@ -57,18 +57,4 @@ h1 {
   font-size: 14px;
 }
 
-.card h2 {
-  margin-top: 5px;
-  font-size: 32px;
-}
-
-.modes {
-  margin-bottom: 25px;
-}
-
-.modes button,
-#startBtn {
-  background: linear-gradient(to bottom, #c00000, #700000);
-  border: none;
-  color: white;
 }
