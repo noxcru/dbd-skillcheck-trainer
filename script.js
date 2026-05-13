@@ -2,8 +2,8 @@ const pointer = document.getElementById("pointer");
 const result = document.getElementById("result");
 
 let angle = 0;
-let active = false;
 let interval;
+let active = false;
 
 function startGame() {
 
@@ -19,7 +19,7 @@ function startGame() {
     angle += 5;
 
     pointer.style.transform =
-      `rotate(${angle}deg)`;
+      "rotate(" + angle + "deg)";
 
     if (angle >= 360) {
 
@@ -33,7 +33,7 @@ function startGame() {
   }, 16);
 }
 
-document.addEventListener("keydown", (e) => {
+document.addEventListener("keydown", function(e) {
 
   if (e.code === "Space" && active) {
 
@@ -41,7 +41,7 @@ document.addEventListener("keydown", (e) => {
 
     active = false;
 
-    const hit = angle % 360;
+    let hit = angle % 360;
 
     if (hit >= 350 || hit <= 10) {
 
