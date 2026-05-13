@@ -1,11 +1,12 @@
 const pointer = document.getElementById("pointer");
 const result = document.getElementById("result");
+const startBtn = document.getElementById("startBtn");
 
 let angle = 0;
 let active = false;
-let interval = null;
+let interval;
 
-function startGame() {
+startBtn.addEventListener("click", function () {
 
   clearInterval(interval);
 
@@ -18,7 +19,8 @@ function startGame() {
 
     angle += 5;
 
-    pointer.style.transform = "rotate(" + angle + "deg)";
+    pointer.style.transform =
+      "rotate(" + angle + "deg)";
 
     if (angle >= 360) {
 
@@ -30,7 +32,7 @@ function startGame() {
     }
 
   }, 16);
-}
+});
 
 document.addEventListener("keydown", function (e) {
 
