@@ -1,4 +1,40 @@
-* {
+.generator-wrap {
+  width: 420px;
+  height: 22px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 25px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.generator-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(to right, #b30000, #ff3b3b);
+  transition: width 0.2s;
+}
+
+.combo {
+  margin-top: 18px;
+  font-size: 24px;
+  color: #ffd54a;
+  text-shadow: 0 0 12px rgba(255,213,74,0.8);
+}
+
+.blood-flash {
+  animation: bloodFlash 0.4s;
+}
+
+@keyframes bloodFlash {
+  0% {
+    background: rgba(255,0,0,0.35);
+  }
+
+  100% {
+    background: transparent;
+  }
+}* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
